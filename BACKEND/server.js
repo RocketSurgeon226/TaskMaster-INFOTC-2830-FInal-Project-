@@ -25,7 +25,7 @@ dotenv.config();
 
 const app = express();
 
-// Middlewares
+// Middlewares --> middle layer between web brower and app that processes requests and responses in app lifecycle
 app.use(cors());
 app.use(express.json());
 
