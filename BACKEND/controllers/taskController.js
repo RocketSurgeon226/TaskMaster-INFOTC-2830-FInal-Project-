@@ -1,7 +1,7 @@
 import Task from "../models/Task.js";
 import User from "../models/User.js";
 
-export const getTasks = async (req, res) => {
+export const getTasks = async(req, res) => {
     try {
         const tasks = await Task.find();
         res.json({ success: true, tasks });
@@ -10,7 +10,7 @@ export const getTasks = async (req, res) => {
     }
 };
 
-export const createTask = async (req, res) => {
+export const createTask = async(req, res) => {
     try {
         const task = new Task(req.body);
         const saved = await task.save();
@@ -20,12 +20,11 @@ export const createTask = async (req, res) => {
     }
 };
 
-export const updateTask = async (req, res) => {
+export const updateTask = async(req, res) => {
     try {
         const updated = await Task.findByIdAndUpdate(
-            req.params.id, 
-            req.body, 
-            { new: true }
+            req.params.id,
+            req.body, { new: true }
         );
         res.json({ success: true, task: updated });
     } catch (error) {
@@ -33,7 +32,7 @@ export const updateTask = async (req, res) => {
     }
 };
 
-export const deleteTask = async (req, res) => {
+export const deleteTask = async(req, res) => {
     try {
         await Task.findByIdAndDelete(req.params.id);
         res.json({ success: true, message: "Task deleted" });
@@ -42,12 +41,10 @@ export const deleteTask = async (req, res) => {
     }
 };
 
-export const completeTask = async (req, res) => {
+export const completeTask = async(req, res) => {
     try {
         const task = await Task.findByIdAndUpdate(
-            req.params.id,
-            { completed: true },
-            { new: true }
+            req.params.id, { completed: true }, { new: true }
         );
 
         if (!task) {
@@ -55,13 +52,13 @@ export const completeTask = async (req, res) => {
         }
 
         // Award points
-        const user = await User.findById(task.userID);
+        const user = await User.findById(task.user);
         if (user) {
             user.points += 10;
             await user.save();
         }
 
-        res.json({ success: true, task, newPoints: user?.points || 0 });
+        res.json({ success: true, task, newPoints: user ? user.points : 0 });
     } catch (error) {
         res.status(500).json({ success: false, message: "Completion failed" });
     }

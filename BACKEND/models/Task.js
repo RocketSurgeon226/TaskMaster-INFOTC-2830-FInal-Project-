@@ -1,12 +1,7 @@
 import mongoose from "mongoose";
 
-const taskSchema = mongoose.Schema(
-    {
-        // user: {
-        //     type: mongoose.Schema.Types.ObjectId,
-        //     required: true,
-        //     ref: "User",
-        // },
+const taskSchema = mongoose.Schema({
+
         title: {
             type: String,
             required: true,
@@ -24,10 +19,21 @@ const taskSchema = mongoose.Schema(
             type: Boolean,
             default: false,
         },
-        userID: {
-            type: String,
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
             required: false,
+            ref: "User",
+        },
+        dueDate: {
+            type: Date,
+            required: false,
+        },
+        pointsEarned: {
+            type: Number,
+            default: 0,
+
         }
+
     },
 
     {
