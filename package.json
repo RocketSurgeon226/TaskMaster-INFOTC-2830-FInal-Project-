@@ -1,0 +1,21 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "React Router for navigation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocketSurgeon226/TaskMaster-INFOTC-2830-FInal-Project-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/RocketSurgeon226/TaskMaster-INFOTC-2830-FInal-Project-/issues"
+  },
+  "homepage": "https://github.com/RocketSurgeon226/TaskMaster-INFOTC-2830-FInal-Project-#readme"
+}

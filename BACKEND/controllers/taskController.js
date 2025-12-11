@@ -55,7 +55,9 @@ export const completeTask = async(req, res) => {
         const user = await User.findById(task.user);
         if (user) {
             user.points += 10;
-            await user.save();
+            user.save();
+            task.pointsEarned = (task.pointsEarned || 0) + 10;
+            await task.save();
         }
 
         res.json({ success: true, task, newPoints: user ? user.points : 0 });
