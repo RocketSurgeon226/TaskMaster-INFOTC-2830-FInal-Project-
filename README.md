@@ -3,7 +3,7 @@
 
 
 ### 1. Frontend – React
-## Ezra
+## Ezra Spruiel
   React Router for navigation
   
   Axios integration with backend
@@ -14,7 +14,7 @@
 
 
 ### 2. Backend – Node.js & Express
-## Adam
+## Adam Smith
   Well-structured Express server
   
   Fully functional route handling
@@ -25,7 +25,7 @@
 
 
 ### 3. Database – MongoDB with Mongoose
-## Praise
+## Praise Aruwajoye
   At least two Mongoose models
   
   Full CRUD capability
@@ -41,7 +41,7 @@
 
 
 ### 5. Documentation and Video Presentation
-## Lesa
+## Lesa Aken
   YouTube video walkthrough (5–10 min): All team members must present
   [INFOTC 2830 Web Dev 1 LEAP TaskMaster](https://youtu.be/ffdwL1P_APM)
 
