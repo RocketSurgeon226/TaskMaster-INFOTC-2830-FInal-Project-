@@ -3,7 +3,16 @@ import User from "../models/User.js";
 
 export const getTasks = async(req, res) => {
     try {
-        const tasks = await Task.find();
+        const { userId } = req.query;
+
+        if (!userId) {
+            return res.status(400).json({
+                success: false,
+                message: "userId is required"
+            });
+        }
+
+        const tasks = await Task.find({ user: userId });
         res.json({ success: true, tasks });
     } catch (error) {
         res.status(500).json({ success: false, message: "Could not load tasks" });

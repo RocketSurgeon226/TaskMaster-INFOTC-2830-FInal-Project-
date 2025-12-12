@@ -1,16 +1,16 @@
 // Taskmaster's "engine"
 // Starts Express
-    // Creates server
+// Creates server
 // Connects to MongoDB
-    // Connects to database
+// Connects to database
 // Loads routes
-    // Loads task and reward routes
+// Loads task and reward routes
 // Handles JSON (JavaScript Object Notation)
-    // Converts data from server to web app to make it human-readable and machine-parsable
+// Converts data from server to web app to make it human-readable and machine-parsable
 // Sets CORS (Cross Origin Resource Sharing)
-    // Allow requests from other domains
+// Allow requests from other domains
 // Listens for port requests
-    // Starts, stops, and restarts server
+// Starts, stops, and restarts server
 
 
 import express from "express";
@@ -21,6 +21,7 @@ import path from "path";
 import connectDB from "./config/db.js";
 import taskRoutes from "./routes/taskRoutes.js";
 import rewardRoutes from "./routes/rewardRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config({ path: path.resolve("./.env") });
 
@@ -35,11 +36,12 @@ app.use(express.json());
 connectDB();
 
 // Routes
+app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/rewards", rewardRoutes);
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.listen(
     PORT,
     console.log(`Server running on port ${PORT}`)
