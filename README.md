@@ -3,6 +3,7 @@
 
 
 ### 1. Frontend – React
+## Ezra
   React Router for navigation
   
   Axios integration with backend
@@ -13,6 +14,7 @@
 
 
 ### 2. Backend – Node.js & Express
+## Adam
   Well-structured Express server
   
   Fully functional route handling
@@ -23,6 +25,7 @@
 
 
 ### 3. Database – MongoDB with Mongoose
+## Praise
   At least two Mongoose models
   
   Full CRUD capability
@@ -31,19 +34,16 @@
 
 
 ### 4. Integration and Features
+## Ezra, Adam, Praise
   End-to-end functionality from frontend to database
   
   At least 3 functional features serving a real-world use case
 
 
 ### 5. Documentation and Video Presentation
-  YouTube video walkthrough (5–10 min): All team members must present
-  
-  PowerPoint slides included and referenced in the video
+## Lesa
+  PowerPoint slides included
 
+  Audio recording walkthrough (5–10 min) embedded into Powerpoint slides: All team members must present
 
-### 6. Peer Review
-  Each student must submit an anonymous peer evaluation of their teammates.
-  
-  Covers participation, reliability, and technical contributions
 
