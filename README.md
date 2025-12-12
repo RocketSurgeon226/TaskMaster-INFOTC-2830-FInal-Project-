@@ -42,8 +42,9 @@
 
 ### 5. Documentation and Video Presentation
 ## Lesa
-  PowerPoint slides included
+  YouTube video walkthrough (5–10 min): All team members must present
+  [INFOTC 2830 Web Dev 1 LEAP TaskMaster](https://youtu.be/ffdwL1P_APM)
 
-  Audio recording walkthrough (5–10 min) embedded into Powerpoint slides: All team members must present
+  PowerPoint slides included and referenced in the video
 
 
